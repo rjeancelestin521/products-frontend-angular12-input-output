@@ -1,0 +1,15 @@
+<tr *ngIf="productInput">
+  <td>{{ productInput.name }}</td>
+  <td>{{ productInput.price }}</td>
+  <td>{{ productInput.quantity }}</td>
+  <td>
+    <i (click)="onSelectProduct(productInput)" class="clickable" [ngClass]="productInput.selected ? 'fa fa-unlock text-success' : 'fa fa-lock text-danger'"></i>
+  </td>
+  <td>
+    <i [ngClass]="productInput.available ? 'fa fa-check text-success' : 'fa fa-remove text-danger'"></i>
+  </td>
+  <td>
+    <button (click)="onEditProduct(productInput)" class="btn btn-sm btn-info me-1"><i class="fa fa-edit"></i></button>
+    <button (click)="onDeleteProduct(productInput)" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button>
+  </td>
+</tr>

@@ -1,0 +1,7 @@
+<app-products-navbar
+  (productEventEmitter)="onProductActionEvent($event)">
+</app-products-navbar>
+<app-products-list
+  (productEventEmitter)="onProductActionEvent($event)"
+  [productsInput$]="productsData$">
+</app-products-list>
